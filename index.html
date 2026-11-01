@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexShop - Modern UI</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- 1. HEADER (Navbar) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2 text-2xl font-bold text-indigo-700">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>FlexShop</span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">Home</a>
+                <a href="#" class="hover:text-indigo-600 transition">Products</a>
+                <a href="#" class="hover:text-indigo-600 transition">About</a>
+                <a href="#" class="hover:text-indigo-600 transition">Contact</a>
+            </nav>
+
+            <!-- Search Bar (flex-grow concept) -->
+            <div class="flex-grow max-w-md mx-4 hidden sm:block">
+                <div class="relative">
+                    <input type="text" placeholder="Search products..." class="w-full bg-gray-100 pl-4 pr-10 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Icons Panel -->
+            <div class="flex items-center space-x-5 text-gray-600">
+                <button class="hover:text-indigo-600 relative">
+                    <i class="fa-regular fa-heart text-xl"></i>
+                </button>
+                <button class="hover:text-indigo-600 relative">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">3</span>
+                </button>
+                <button class="hover:text-indigo-600">
+                    <i class="fa-regular fa-user text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="bg-indigo-50/50 py-16 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Left Info Panel -->
+            <div class="flex-1 max-w-xl text-center md:text-left">
+                <span class="text-xs uppercase font-bold tracking-widest text-indigo-600 bg-indigo-100 px-3 py-1 rounded-full">New Collection</span>
+                <h1 class="text-4xl md:text-6xl font-black text-gray-900 mt-4 leading-tight">
+                    Better Products <br>for a <span class="text-indigo-600">Brighter Future</span>
+                </h1>
+                <p class="text-gray-600 mt-6 text-lg leading-relaxed">
+                    Discover amazing products that make your life easier, simpler and more beautiful.
+                </p>
+                <button class="mt-8 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg shadow-indigo-200 transition flex items-center gap-3 mx-auto md:mx-0">
+                    <span>Shop Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Right Visual Panel (Placeholder for images) -->
+            <div class="flex-1 flex justify-center relative">
+                <div class="w-72 h-72 md:w-96 md:h-96 bg-indigo-100 rounded-full absolute -z-10 blur-2xl opacity-60"></div>
+                <!-- Main Product Image Placeholder -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 max-w-sm flex flex-col items-center">
+                    <div class="w-64 h-64 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 text-4xl mb-4">
+                        <i class="fa-solid fa-headphones-simple text-indigo-500 text-6xl"></i>
+                    </div>
+                    <span class="text-xs text-gray-400">Featured Premium Audio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FEATURE/BENEFITS SECTION -->
+    <section class="py-12 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 p-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">Free Shipping</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">On all orders over $50</p>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 p-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">Secure Payments</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">100% secure payment</p>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 p-4">
+                <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">24/7 Support</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">We're here to help</p>
+                </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 p-4">
+                <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">Easy Returns</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">30 days return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURED PRODUCTS SECTION -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="flex items-center justify-between mb-10">
+                <h2 class="text-2xl md:text-3xl font-black text-gray-900">Featured Products</h2>
+                <a href="#" class="text-indigo-600 font-semibold hover:underline flex items-center gap-1 text-sm">
+                    <span>View All</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Products Grid (flex-wrap / grid concept) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-4 bg-gray-50 flex items-center justify-center h-48 relative">
+                        <i class="fa-solid fa-stopwatch text-gray-700 text-5xl"></i>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="font-bold text-gray-800 group-hover:text-indigo-600 transition">Smart Watch</h3>
+                        <p class="text-indigo-600 font-extrabold text-lg mt-1">$99.00</p>
+                        <!-- Rating -->
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs mt-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-1">(124)</span>
+                        </div>
+                        <button class="mt-5 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg text-sm transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-4 bg-gray-50 flex items-center justify-center h-48 relative">
+                        <i class="fa-solid fa-ear-buds text-gray-700 text-5xl"></i>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="font-bold text-gray-800 group-hover:text-indigo-600 transition">Wireless Earbuds</h3>
